@@ -1,0 +1,21 @@
+---
+antora:
+  name: modules
+  dir: www
+  modules:
+    - name: "01-miniconda"
+      label: "Miniconda"
+      solveButton: true
+    - name: "02-install-tensorflow"
+      label: "Install Tensorflow"
+      solveButton: true
+    - name: "03-notebook-setup"
+      label: "Notebook Setup"
+      solveButton: true
+    - name: "04-tf-test"
+      label: "Tf Test"
+      solveButton: true
+
+tabs:
+  - name: ">_ terminal"
+    url: /wetty

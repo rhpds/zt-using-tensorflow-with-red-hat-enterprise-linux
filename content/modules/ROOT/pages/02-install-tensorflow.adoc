@@ -1,0 +1,46 @@
+First, create a Conda environment for TensorFlow:
+
+[source,bash]
+----
+conda create --name tf python=3.9 -y
+----
+
+Then, activate the Conda environment using the following command:
+
+[source,bash]
+----
+conda activate tf
+----
+
+Your Conda environment status is shown in the command line within
+parentheses like this:
+
+image:../assets/20230630_152220_Conda_Environment_Status.png[../assets/20230630_152220_Conda_Environment_Status]
+
+Next, we need to ensure that Pip, Python’s package manager, is up to
+date. To do this, we can run the following command:
+
+[source,bash]
+----
+pip install --upgrade pip
+----
+
+Finally, we can install TensorFlow from pip. We will use the CPU-only
+build of TensorFlow because we are not using a GPU for ML on this
+system.
+
+[source,bash]
+----
+pip install tensorflow-cpu
+----
+
+To verify that Tensorflow is running properly on the CPU, run the
+following command, which will execute a simple Python test program:
+
+[source,bash]
+----
+python3 -c "import tensorflow as tf; print(tf.reduce_sum(tf.random.normal([1000, 1000])))" 2>/dev/null
+----
+
+The output should look like this. The numbers may differ, but it should
+have this format:

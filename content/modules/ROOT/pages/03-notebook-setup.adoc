@@ -1,0 +1,35 @@
+In this step, you will set up a Jupyter Notebook to run your code.
+First, ensure that your Conda environment is activated. When activated,
+your command prompt will look like this:
+image:../assets/20230630_153341_Conda_Environment_Status_copy.png[../assets/20230630_153341_Conda_Environment_Status_copy]
+
+If it is inactive, you can activate it with the following command:
+
+[source,bash]
+----
+conda activate tf
+----
+
+Next, install the necessary components to run the Jupyter Notebook and
+perform data visualization
+
+[source,bash]
+----
+pip install notebook matplotlib
+----
+
+Finally, start the Jupyter Notebook by running the following command:
+
+[source,bash]
+----
+nohup conda run -n tf jupyter notebook --ip=* --no-browser --allow-root -NotebookApp.password='redhat' -NotebookApp.token='redhat' --notebook-dir="/root/tensorflow" </dev/null >/dev/null 2>&1 &
+----
+
+The output will look like this, but the exact numbers may vary:
+
+____
+Note: To learn more about the configuration and deployment of Jupyter
+Notebooks, take a look at our lab on managing Jupyter Notebooks! It
+contains more detailed explanations to help you get started with Jupyter
+Notebooks.
+____
